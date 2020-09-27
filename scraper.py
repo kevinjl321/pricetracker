@@ -24,15 +24,15 @@ def send_email():
     server.starttls()
     server.ehlo()
 
-    server.login('testuser745235@gmail.com', 'uvpihremxdydhehl')
+    server.login({insert email sender address}, {insert token})
 
     subject = 'Price has dropped'
     body = 'The price of the product has dropped! Link:https://www.amazon.com/Apple-iPad-12-9-inch-Wi-Fi-256GB/dp/B0862HNWGK/ref=sr_1_3?dchild=1&keywords=ipad+pro&qid=1590115879&sr=8-3 '
     msg = f"Subject: {subject}\n\n{body}"
     
     server.sendmail(
-        'testuser745235@gmail.com',
-        'thetechosaur2@gmail.com',
+        {insert sender email},
+        {insert recipient},
         msg
     )
 
